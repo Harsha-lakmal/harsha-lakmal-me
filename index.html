@@ -27,6 +27,18 @@
     <link rel="stylesheet" href="css/flaticon.css" />
     <link rel="stylesheet" href="css/icomoon.css" />
     <link rel="stylesheet" href="css/style.css" />
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "JvwOcWL1yMH7B5dBS",
+      });
+   })();
+</script>
+
   </head>
 
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -237,7 +249,7 @@
             </p>
             <p>
               <a
-                href="https://drive.google.com/file/d/1uP54jj2YU1f-l4RIVEF4YV4bIz6IB-ZL/view?usp=sharing"
+                href="https://drive.google.com/file/d/1uP54jj2YU1f-l4RIVEF4YV4bIz6IB-ZL/view"
                 class="btn btn-primary py-3 px-3"
                 >Download CV</a
               >
@@ -513,7 +525,7 @@ p {
           <div class="col-md-6 text-center ftco-animate">
             <p>
               <a
-                href="https://drive.google.com/file/d/1uP54jj2YU1f-l4RIVEF4YV4bIz6IB-ZL/view?usp=sharing"
+                href="https://drive.google.com/file/d/1uP54jj2YU1f-l4RIVEF4YV4bIz6IB-ZL/view"
                 class="btn btn-primary py-4 px-5"
                 >Download CV</a
               >
@@ -1726,6 +1738,7 @@ p {
                   type="text"
                   class="form-control"
                   placeholder="Your Name"
+                  id = "name"
                 />
               </div>
               <div class="form-group">
@@ -1733,15 +1746,16 @@ p {
                   type="text"
                   class="form-control"
                   placeholder="Your Email"
+                  id ="email"
                 />
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject" />
+                <input type="text" class="form-control" placeholder="Subject" id="title" />
               </div>
               <div class="form-group">
                 <textarea
-                  name=""
-                  id=""
+                  name="message"
+                  id="message"
                   cols="30"
                   rows="7"
                   class="form-control"
@@ -1750,9 +1764,10 @@ p {
               </div>
               <div class="form-group">
                 <input
-                  type="submit"
+                  type="button"
                   value="Send Message"
                   class="btn btn-primary py-3 px-5"
+                  onclick="sendMail()"
                 />
               </div>
             </form>
@@ -1957,7 +1972,7 @@ p {
         ></circle>
       </svg>
     </div>
-
+    <script  src="email.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
     <script src="js/popper.min.js"></script>
